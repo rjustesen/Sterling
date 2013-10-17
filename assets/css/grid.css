@@ -1,0 +1,45 @@
+﻿.grid {       
+    width: 100%; 
+    background-color: #fff; 
+    margin: 5px 0 10px 0; 
+    border: none; 
+    border-collapse:collapse;
+} 
+
+.grid td          
+{
+    padding: 2px; 
+    background: #FFF;      
+} 
+
+.grid th 
+{         
+    background: #D2D0D0;         
+    color: #636363;
+    font-family: Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight:bolder;
+	text-align: left;
+} 
+.grid td a
+{
+    color: blue; 
+    font-size: inherit; 
+	font-weight:normal;
+    font-family: Helvetica, sans-serif;
+    text-decoration:none;
+}
+
+.grid th a
+{
+    color: blue; 
+    font-size: inherit; 
+	font-weight:normal;
+    font-family: Helvetica, sans-serif;
+    text-decoration:none;
+}
+
+.grid .alt  
+{
+     background: #424242 url(../images/grd_alt.png) repeat-x top; 
+}

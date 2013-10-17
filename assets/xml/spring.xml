@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net" xmlns:db="http://www.springframework.net/database">
+
+  
+  <object type="ScoreWebService" >
+    <property name="ScoreService" ref="ScoreService"/>
+    <property name="PortfolioService" ref="PortfolioService"/>
+  </object>
+  
+  
+  <!-- Configuration for objects contained in App_data-->
+  <object type="BasePage" >
+    <property name="UserService" ref="UserService"/>
+    <property name="EMailService" ref="EMailService"/>
+    <property name="PortfolioService" ref="PortfolioService"/>
+    <property name="RegionService" ref="RegionService"/>
+    <property name="CategoryService" ref="CategoryService"/>
+  </object> 
+
+  <!-- Pages -->
+
+  <object type="~/RecoverAccount.aspx" >
+    <property name="UserService" ref="UserService"/>
+  </object>
+
+  <object type="~/ReportView.aspx" >
+    <property name="ReportService" ref="ReportService"/>
+  </object>
+
+  <object type="~/Admin/Photos.aspx" >
+    <property name="ReportService" ref="ReportService"/>
+  </object>
+  
+  <object type="~/Profile.aspx" >
+    <property name="UserService" ref="UserService"/>
+  </object>
+
+  <object type="~/Admin/Scoring.aspx" >
+    <property name="ScoreService" ref="ScoreService"/>
+  </object>
+
+  <object type="~/Admin/BuildScores.aspx" >
+    <property name="ScoreService" ref="ScoreService"/>
+  </object>
+
+  <object type="~/Admin/Nominees.aspx" >
+    <property name="ScoreService" ref="ScoreService"/>
+  </object>
+
+  <object type="~/Login.aspx" >
+    <property name="UserService" ref="UserService"/>
+  </object>
+  
+  <object type="~/Admin/Default.aspx" >
+    <property name="CategoryService" ref="CategoryService"/>
+    <property name="RegionService" ref="RegionService"/>
+  </object>
+
+  <object type="~/Judge/Default.aspx" >
+    <property name="ScoreService" ref="ScoreService"/>
+  </object>
+
+  <object type="~/Judge/StudentEdit.aspx" >
+    <property name="ScoreService" ref="ScoreService"/>
+  </object>
+  
+  
+</objects>

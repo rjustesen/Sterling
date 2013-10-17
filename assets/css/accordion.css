@@ -1,0 +1,114 @@
+﻿.accordion {   
+    width: 100%;   
+ }   
+   
+.accordionHeader  
+{
+    background-image: url('../images/arrow_rt.png'); 
+    background-repeat: no-repeat;     
+    background-position: right center;     
+    border: 1px solid #ECECEC;   
+    background-color: #E1E1E1;   
+    font-family: Arial,Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight:bolder;
+	color: #3D3D3D;
+    padding: 3px;   
+    margin-top: 3px;   
+    cursor: pointer;   
+    /* IE10+ */
+     background-image: url('../images/arrow_rt.png'), -ms-linear-gradient(top, #E1E1E1 0%,#A2A2A2 100%); 
+    /* FF3.6+ */
+     background-image: url('../images/arrow_rt.png'), -moz-linear-gradient(top, #E1E1E1 0%, #A2A2A2 100%);  
+    /* Chrome,Safari4+ */
+     background-image: url('../images/arrow_rt.png'), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E1E1E1), color-stop(100%,#A2A2A2)); 
+   /* Chrome10+,Safari5.1+ */
+     background-image: url('../images/arrow_rt.png'), -webkit-linear-gradient(top, #E1E1E1 0%,#A2A2A2 100%); 
+   /* Opera11.10+ */
+     background-image: url('../images/arrow_rt.png'), -o-linear-gradient(top, #E1E1E1 0%,#A2A2A2 100%); 
+   /* W3C */
+     background-image: url('../images/arrow_rt.png'), linear-gradient(top, #E1E1E1 0%,#A2A2A2 100%); 
+}   
+   
+.accordionHeader:hover
+{
+    background-image: url('../images/arrow_rt.png');
+    background-repeat: no-repeat;     
+    background-position: right center;     
+    background-color: #636363;   
+	color: #E1E1E1;
+   /* filter:progid:DXImageTransform.Microsoft.Gradient  (GradientType=0,StartColorStr='#B1B1B1',EndColorStr='#636363'); */
+   /* IE10+ */
+     background-image: url('../images/arrow_rt.png'), -ms-linear-gradient(top, #B1B1B1 0%,#636363 100%); 
+    /* FF3.6+ */
+     background-image: url('../images/arrow_rt.png'), -moz-linear-gradient(top, #B1B1B1 0%, #636363 100%);  
+    /* Chrome,Safari4+ */
+     background-image: url('../images/arrow_rt.png'), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#B1B1B1), color-stop(100%,#636363)); 
+   /* Chrome10+,Safari5.1+ */
+     background-image: url('../images/arrow_rt.png'), -webkit-linear-gradient(top, #B1B1B1 0%,#636363 100%); 
+   /* Opera11.10+ */
+     background-image: url('../images/arrow_rt.png'), -o-linear-gradient(top, #B1B1B1 0%,#636363 100%); 
+   /* W3C */
+     background-image: url('../images/arrow_rt.png'), linear-gradient(top, #B1B1B1 0%,#636363 100%); 
+}  
+
+.accordionHeaderSelected  
+{
+    background-image: url('../images/arrow_dn.png');
+    background-repeat: no-repeat;     
+    background-position: right center;     
+    border: 1px solid #E1E1E1;   
+    font-family: Arial,Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight:bolder;
+	color: #636363;
+    background-color: #D2D0D0;   
+    padding: 3px;   
+    margin-top: 3px;   
+    cursor: pointer;   
+    background-image: url('../images/arrow_dn.png'), -ms-linear-gradient(top, #EDEDED 0%,#B5B5B5 100%); 
+    /* FF3.6+ */
+     background-image: url('../images/arrow_dn.png'), -moz-linear-gradient(top, #EDEDED 0%, #B5B5B5 100%);  
+    /* Chrome,Safari4+ */
+     background-image: url('../images/arrow_dn.png'), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#B5B5B5)); 
+   /* Chrome10+,Safari5.1+ */
+     background-image: url('../images/arrow_dn.png'), -webkit-linear-gradient(top, #EDEDED 0%,#B5B5B5 100%); 
+   /* Opera11.10+ */
+     background-image: url('../images/arrow_dn.png'), -o-linear-gradient(top, #EDEDED 0%,#B5B5B5 100%); 
+   /* W3C */
+     background-image: url('../images/arrow_dn.png'), linear-gradient(top, #EDEDED 0%,#B5B5B5 100%); 
+}
+   
+.accordionHeaderSelected:hover
+{
+    background-image: url('../images/arrow_dn.png');
+    background-color: #636363;   
+	color: #E1E1E1;
+	background-image: url('../images/arrow_dn.png'), -ms-linear-gradient(top, #B1B1B1 0%,#636363 100%); 
+    /* FF3.6+ */
+     background-image: url('../images/arrow_dn.png'), -moz-linear-gradient(top, #B1B1B1 0%, #636363 100%);  
+    /* Chrome,Safari4+ */
+     background-image: url('../images/arrow_dn.png'), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#B1B1B1), color-stop(100%,#636363)); 
+   /* Chrome10+,Safari5.1+ */
+     background-image: url('../images/arrow_dn.png'), -webkit-linear-gradient(top, #B1B1B1 0%,#636363 100%); 
+   /* Opera11.10+ */
+     background-image: url('../images/arrow_dn.png'), -o-linear-gradient(top, #B1B1B1 0%,#636363 100%); 
+   /* W3C */
+     background-image: url('../images/arrow_dn.png'), linear-gradient(top, #B1B1B1 0%,#636363 100%); 
+}   
+          
+.accordionContent {   
+    background-color: #FFFFFF;   
+    border: 1px dashed #ECECEC;   
+    border-top: none;   
+    padding: 3px;   
+    padding-top: 10px;   
+}   
+.headerText 
+{
+    font-family: "PT Serif", sans-serif;
+	font-size: 16px;
+	font-weight:bolder;
+	color: #636363;
+}
+

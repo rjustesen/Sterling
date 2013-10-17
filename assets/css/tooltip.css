@@ -1,0 +1,39 @@
+﻿.xstooltip 
+{
+    visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	border: solid 1px;
+	background-color: #FFFF99;
+	height:auto;
+	width:auto;
+}
+
+#tt {
+ position:absolute;
+ display:block;
+ background:url(../images/tt_left.gif) top left no-repeat;
+ }
+ #tttop {
+ display:block;
+ height:5px;
+ margin-left:5px;
+ background:url(../images/tt_top.gif) top right no-repeat;
+ overflow:hidden;
+ }
+ #ttcont {
+ display:block;
+ padding:2px 12px 3px 7px;
+ margin-left:5px;
+ background:#666;
+ color:#fff;
+ }
+#ttbot {
+display:block;
+height:5px;
+margin-left:5px;
+background:url(../images/tt_bottom.gif) top right no-repeat;
+overflow:hidden;
+}

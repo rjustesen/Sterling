@@ -1,0 +1,61 @@
+﻿.tabs {
+    background-image: url('../Images/tab_b.png');
+    width: 100%;
+    z-index: 101;
+    font-size: 13px;
+}
+
+.tablist 
+{
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+}
+
+.tablist td {
+    float: left;
+    background-image: url('../Images/tab_b.png');
+    line-height: 20px;
+    list-style: none;
+}
+
+.tablist td a {
+    display: block;
+    padding: 0 15px;
+    font-weight: bold;
+    background-image:url('../Images/tab_s.png');
+    background-repeat:no-repeat;
+    background-position:right;
+    color: #283A5D;
+    text-decoration: none;
+    outline: none;
+}
+
+.tablist a {
+    padding: 0 5px;
+}
+
+.tablist a:hover {
+    background-image: url('../Images/tab_h.png');
+    background-repeat:repeat-x;
+    height: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.tablist th a 
+{
+	display: block;
+    background-image: url('../Images/tab_a.png');
+    height: 20px;
+    line-height: 20px;
+    list-style: none;
+    background-repeat:repeat-x;
+    color: #fff;
+}
+
+.tablist th a:hover {
+    background-image: url('../Images/tab_a.png');
+    background-repeat:repeat-x;
+    color: #fff;
+    text-decoration: none;
+}

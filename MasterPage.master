@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Register Src="~/CustomControls/PopupMessageBox.ascx" TagName="MessageBox" TagPrefix="uc" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Sterling Scholar | The official Sterling Scholars scholarship website for 
+        Utah, powered by Deseret News and KSL</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index, nofollow" />
+    <meta name="description" content="The official Sterling Scholars scholarship website for Utah, powered by Deseret News and KSL" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/popup.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/tooltip.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/css/themes/smoothness/jquery-ui-1.10.2.custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Kreon" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css" />
+	<asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+    <ajaxToolkit:ToolkitScriptManager runat="server" ID="ToolkitScriptManager"  EnablePageMethods="true">
+      <Services>
+        <asp:ServiceReference Path="~/ScoreWebService.asmx" />
+      </Services>
+    </ajaxToolkit:ToolkitScriptManager>
+    
+    <div id="wrapper">
+	    <div id="header">
+	    <div class="header">
+            <asp:Label id="lblUserName" runat="server" CssClass="headerright" /><br />
+            <asp:LinkButton runat="server" ID="lnkLogout" visible="false" Text="Logout" CssClass="headerright" onclick="lnkLogout_Click" ></asp:LinkButton>
+		</div>
+		<div id="logo">
+		    <asp:Image ID="logoimg" runat="server" AlternateText="Sterling Scholar" ImageUrl="~/assets/images/SSlogo4-e1328848626768.png" />
+		</div>
+			<asp:ContentPlaceHolder ID="menuPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+	    </div>
+		<div id="page">
+				<div id="content">
+                    <div id="App_Error" runat="server" class="messageError" visible="false" enableviewstate="false">
+                       <asp:Label ID="lblErrorMessage" runat="server" CssClass="Message" />
+                    </div>
+                    <div id="App_Warning" runat="server" class="messageWarning" visible="false" enableviewstate="false">
+                       <asp:Label ID="lblWarningMessage" runat="server" CssClass="Message" />
+                    </div>
+                    <div id="App_Information" runat="server" class="messageInformational" visible="false"  enableviewstate="false">
+                        <asp:Label ID="lblInformationMessage" runat="server" CssClass="Message" />
+                    </div>
+					<div class="box">
+				        <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+					</div>
+					<br class="clearfix" />
+				</div>
+				<br class="clearfix" />
+		</div>
+		<div id="page-bottom">
+				<div id="page-bottom-content">
+					<asp:ContentPlaceHolder ID="BottomCenterPlaceHolder" runat="server">
+                        </asp:ContentPlaceHolder>
+				</div>
+				<br class="clearfix" />
+			</div>
+		</div>
+		<div id="footer">
+			<p><asp:Label runat="server" ID="lblFooterText" Text="Copyright &copy 2012 Deseret Management Corporation"></asp:Label></p><br/>
+		</div>
+		<!-- This is a panel used to display messages -->
+    <asp:Panel runat="server" ID="_pnlClientMessage_" style="display:none;"  CssClass="modalPopup">
+        <asp:UpdatePanel ID="_updClientMessage_" runat="server" UpdateMode="Conditional" >
+            <ContentTemplate>
+                <asp:Button id="btnShowPopup" runat="server" style="display:none" />
+                    <ajaxToolkit:ModalPopupExtender ID="mdlPopup" 
+                        BackgroundCssClass="popupBackground"
+                        runat="server"
+                        TargetControlID="btnShowPopup" 
+                        PopupControlID="_pnlClientMessage_"
+                        CancelControlID="btnClose" />
+                        <table width="100%">
+                            <tr class="topHandle">
+                                <td colspan="2" align="left" runat="server" id="tdCaption">
+                                    &nbsp; <asp:Label ID="_lblCaption_" runat="server"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 60px" valign="middle" align="center">
+                                    <asp:Image ID="imgInfo" runat="server" ImageUrl="~/assets/images/Info-48x48.png" />
+                                </td>
+                                <td valign="middle" align="left">
+                                    <asp:Label runat="server" ID = "_lblClientMessage_" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="right">
+                                    <asp:Button ID="btnClose" runat="server" Text=" OK " CausesValidation="false" />
+                                </td>
+                            </tr>
+                        </table>
+            </ContentTemplate>
+    </asp:UpdatePanel>
+    </asp:Panel>
+		</form>	
+</body>
+</html>

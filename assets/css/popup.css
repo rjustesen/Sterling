@@ -1,0 +1,43 @@
+﻿body, input
+{
+	font-family: Tahoma;
+	font-size: 11px;
+}
+
+/* Popup window styles */
+.modalBackground
+{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+}
+
+.popupBackground
+{
+	background-color: Gray;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+}
+
+.modalPopup
+{
+	background-color: #ffffdd;
+	border-width: 1px;
+	-moz-border-radius: 5px;
+	border-style: solid;
+	border-color: Gray;	
+	min-width: 250px;
+	max-width:400px;	
+}
+
+.topHandle
+{
+	background-color: #97bae6;	
+}
+
+.table
+{
+	padding:0;
+	margin:0;
+}
